@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class HomePage {
-    public HomePage() {
+public class LoginPage {
+    public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -119,99 +119,12 @@ public class HomePage {
 
 
     // Yusuf 121-170
-    @FindBy(css = "[data-icon='user']")
-    public WebElement userIcon;
-    @FindBy(xpath = "//*[.='Register']")
-    public WebElement register;
-    @FindBy(css = "#login-item")
-    public WebElement signIn;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(css = "#username")
+    public WebElement userName;
+    @FindBy(css = "#password")
+    public WebElement password;
+    @FindBy(css = "[type='submit']")
+    public WebElement submit;
 
 
 
