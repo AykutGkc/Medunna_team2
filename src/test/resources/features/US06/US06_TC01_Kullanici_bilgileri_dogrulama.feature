@@ -38,16 +38,43 @@ Feature: Register islemleri
     And Email'in "emailUser" oldugunu dogrula
 
 
-    Scenario: Delete Metin Erdem
-      Given Kullanici medunna anasayfasina gider
-      Then Sag ustteki user ikonuna tikla
-      And Sign in butonuna tikla
-      And Kayitli Admin hesabina ait Username "adminUsername" gir
-      And Kayitli Admin hesabina ait Password "adminPassword" gir
-      And Sign in (Submit) butonuna tikla
-      And Administration butonuna tikla
-      And User Management butonuna tikla
-      And Users tablosunda son sayfaya tikla
-      And Yeni olusturulan kullaniciyi sil
+  Scenario: Delete Metin Erdem
+    Given Kullanici medunna anasayfasina gider
+    Then Sag ustteki user ikonuna tikla
+    And Sign in butonuna tikla
+    And Kayitli Admin hesabina ait Username "adminUsername" gir
+    And Kayitli Admin hesabina ait Password "adminPassword" gir
+    And Sign in (Submit) butonuna tikla
+    And Administration butonuna tikla
+    And User Management butonuna tikla
+    And Users tablosunda son sayfaya tikla
+    And Yeni olusturulan kullaniciyi sil
+
+  Scenario: US06_TC02 Kullanici Firstname Lastname ve Email bilgilerini güncelleyebilmeli
+    Given Kullanici medunna anasayfasina gider
+    And Sag ustteki user ikonuna tikla
+    And Sign in butonuna tikla
+    And Gecerli Username "user2firstname" gir
+    And Yeni User hesabina ait Password gir
+    And Sign in (Submit) butonuna tikla
+    And Settings butonuna tikla
+    And Firstname kutusuna yeni bir veri gir
+    And Lastname kutusuna yeni bir veri gir
+    And Email kutusuna yeni bir veri gir
+    And User Settings Save butonuna tikla
+    And Sag ustteki user ikonuna tikla
+    And Sign out'a tikla
+    And Sag ustteki user ikonuna tikla
+    And Sign in butonuna tikla
+    And Gecerli Username "user2firstname" gir
+    And Yeni User hesabina ait Password gir
+    And Sign in (Submit) butonuna tikla
+    And Settings butonuna tikla
+    And First Name degerinin güncellendigini dogrula
+    And Last Name degerinin güncellendigini dogrula
+    And Email bilgisinin güncellendigini dogrula
+
+
+
 
 
