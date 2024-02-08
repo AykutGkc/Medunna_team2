@@ -204,7 +204,7 @@ ReusableMethods.clickElementByJS(accountPage.accountSettings);
     public void yeniOlusturulanKullaniciyiSil() {
         ReusableMethods.bekle(2);
         ReusableMethods.scroll(adminPage.DeleteButton);
-        adminPage.DeleteButton.click();
+        ReusableMethods.clickElementByJS(adminPage.DeleteButton);
         ReusableMethods.bekle(2);
         ReusableMethods.clickElementByJS(adminPage.deleteConfirmButton);
     }
