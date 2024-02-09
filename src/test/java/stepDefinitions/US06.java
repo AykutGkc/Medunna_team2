@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -24,6 +25,11 @@ public class US06 {
     AccountRegisterPage accountPage = new AccountRegisterPage();
     LoginPage loginPage = new LoginPage();
     AdminPage adminPage = new AdminPage();
+    Faker faker= new Faker();
+    String userFirstnameNew= faker.name().firstName();
+    String userLastnameNew= faker.name().lastName();
+    String userEmailNew= faker.internet().emailAddress();
+
     @And("Yeni User hesabina ait Password gir")
     public void YeniUserHesabinaAitPasswordGir() {
         loginPage.password.sendKeys(ConfigReader.getProperty("firstPasswordUser"));
@@ -68,9 +74,10 @@ public class US06 {
 
     }
 
-    @And("Gecerli Username {string} gir")
-    public void gecerliUsernameGir(String userName) {
-        accountPage.registerUserName.sendKeys(ConfigReader.getProperty(userName));
+    @And("User hesabina ait username {string} gir")
+    public void userHesabinaAitUsernameGir(String userName) {
+       loginPage.userName.sendKeys(ConfigReader.getProperty(userName));
+       ReusableMethods.bekle(1);
 
     }
 
@@ -207,5 +214,48 @@ ReusableMethods.clickElementByJS(accountPage.accountSettings);
         ReusableMethods.clickElementByJS(adminPage.DeleteButton);
         ReusableMethods.bekle(2);
         ReusableMethods.clickElementByJS(adminPage.deleteConfirmButton);
+    }
+
+
+    @And("User hesabina ait password {string} gir")
+    public void userHesabinaAitPasswordGir(String username) {
+        loginPage.password.sendKeys(ConfigReader.getProperty(username));
+    }
+
+    @And("Firstname kutusuna yeni bir veri gir")
+    public void firstnameKutusunaYeniBirVeriGir() {
+        accountPage.accountSettingsFirstName.sendKeys(userFirstnameNew);
+    }
+
+    @And("Lastname kutusuna yeni bir veri gir")
+    public void lastnameKutusunaYeniBirVeriGir() {
+        accountPage.accountSettingsLastName.sendKeys(userLastnameNew);
+    }
+
+    @And("Email kutusuna yeni bir veri gir")
+    public void emailKutusunaYeniBirVeriGir() {
+        accountPage.accountSettingsEmail.sendKeys(userEmailNew);
+    }
+
+    @And("User Settings Save butonuna tikla")
+    public void userSettingsSaveButonunaTikla() {
+        ReusableMethods.clickElementByJS(accountPage.accountSettingsSave);
+    }
+
+    @And("First Name degerinin güncellendigini dogrula")
+    public void firstNameDegerininGüncellendiginiDogrula() {
+    }
+
+    @And("Last Name degerinin güncellendigini dogrula")
+    public void lastNameDegerininGüncellendiginiDogrula() {
+    }
+
+    @And("Email bilgisinin güncellendigini dogrula")
+    public void emailBilgisininGüncellendiginiDogrula() {
+    }
+
+    @And("Gecerli Username {string} gir")
+    public void gecerliUsernameGir(String userNameUser) {
+        accountPage.registerUserName.sendKeys(ConfigReader.getProperty(userNameUser));
     }
 }

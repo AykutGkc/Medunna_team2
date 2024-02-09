@@ -145,6 +145,8 @@ public class AccountRegisterPage {
     public WebElement accountSettingsEmail;
     @FindBy(xpath = "//*[.='Settings']")
     public WebElement accountSettings;
+@FindBy(xpath = "(//*[.='Save'])[2]")
+    public WebElement accountSettingsSave;
 
 
 }
