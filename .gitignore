@@ -1,8 +1,8 @@
 /test-output/
-configuration.properties
+
 /.idea
 /target
-/target/configuration.properties/
+
 cucumber.properties
 
 # Created by https://www.toptal.com/developers/gitignore/api/java,intellij,maven
