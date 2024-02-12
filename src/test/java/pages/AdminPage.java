@@ -141,6 +141,8 @@ public class AdminPage {
     public WebElement DeleteButton;
 @FindBy(xpath = "//*[@class='modal-footer']//*[.='Delete']")
     public WebElement deleteConfirmButton;
+@FindBy(css = "#entity-menu")
+    public WebElement itemTitles;
 
 
 
