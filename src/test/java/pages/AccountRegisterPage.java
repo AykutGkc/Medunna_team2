@@ -268,7 +268,107 @@ public class AccountRegisterPage {
 
 
 
-    //371-421 Esra
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  //371-421 Esra
     @FindBy (css ="[href$='password']")
     public WebElement passwordOnMenu;
     @FindBy (css ="#currentPassword")
@@ -288,10 +388,6 @@ public class AccountRegisterPage {
     public WebElement firstLevelPassword;
 @FindBy (css ="[style='background-color: rgb(255, 153, 0);']")
     public WebElement secondLevelPassword;
-
-
-
-
 
 
 

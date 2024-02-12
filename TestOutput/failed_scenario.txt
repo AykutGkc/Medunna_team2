@@ -1,0 +1,1 @@
+file:src/test/resources/features/US06/US06_TC01_Kullanici_bilgileri_dogrulama.feature:2:41:53
