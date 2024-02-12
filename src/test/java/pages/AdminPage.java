@@ -68,11 +68,16 @@ public class AdminPage {
 
 
 
+// 71-120 Gökhan
 
+   @FindBy(css = "#entity-menu")
+   public  WebElement itemsTitles ;
 
+    @FindBy(css = "#entity-menu > div > a:nth-child(3) > span")
+    public  WebElement physician ;
 
-
-
+    @FindBy(xpath = "(//*[@class='table-responsive'])[1] ")
+    public  WebElement physicianTable ;
 
 
 
