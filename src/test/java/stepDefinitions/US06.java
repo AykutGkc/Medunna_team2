@@ -44,7 +44,8 @@ public class US06 {
 
     @Then("Sag ustteki user ikonuna tikla")
     public void sagUsttekiUserIkonunaTikla() {
-        ReusableMethods.cleanByJs(homePage.userIcon);
+        ReusableMethods.bekle(1);
+        ReusableMethods.click(homePage.userIcon);
 
     }
 
@@ -224,34 +225,50 @@ ReusableMethods.clickElementByJS(accountPage.accountSettings);
 
     @And("Firstname kutusuna yeni bir veri gir")
     public void firstnameKutusunaYeniBirVeriGir() {
+        accountPage.accountSettingsFirstName.clear();
         accountPage.accountSettingsFirstName.sendKeys(userFirstnameNew);
+        ReusableMethods.bekle(1);
     }
 
     @And("Lastname kutusuna yeni bir veri gir")
     public void lastnameKutusunaYeniBirVeriGir() {
+        accountPage.accountSettingsLastName.clear();
         accountPage.accountSettingsLastName.sendKeys(userLastnameNew);
+        ReusableMethods.bekle(1);
+
     }
 
     @And("Email kutusuna yeni bir veri gir")
     public void emailKutusunaYeniBirVeriGir() {
+        accountPage.accountSettingsEmail.clear();
         accountPage.accountSettingsEmail.sendKeys(userEmailNew);
+        ReusableMethods.bekle(1);
+
     }
 
     @And("User Settings Save butonuna tikla")
     public void userSettingsSaveButonunaTikla() {
-        ReusableMethods.clickElementByJS(accountPage.accountSettingsSave);
+        ReusableMethods.click(accountPage.accountSettingsSave);
     }
 
     @And("First Name degerinin güncellendigini dogrula")
     public void firstNameDegerininGüncellendiginiDogrula() {
+        assertEquals(userFirstnameNew,accountPage.accountSettingsFirstName.getAttribute("value"));
+        ReusableMethods.bekle(1);
+
     }
+
 
     @And("Last Name degerinin güncellendigini dogrula")
     public void lastNameDegerininGüncellendiginiDogrula() {
+        assertEquals(userLastnameNew,accountPage.accountSettingsLastName.getAttribute("value"));
+        ReusableMethods.bekle(1);
     }
 
     @And("Email bilgisinin güncellendigini dogrula")
     public void emailBilgisininGüncellendiginiDogrula() {
+        assertEquals(userEmailNew,accountPage.accountSettingsEmail.getAttribute("value"));
+        ReusableMethods.bekle(1);
     }
 
     @And("Gecerli Username {string} gir")

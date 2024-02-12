@@ -38,7 +38,7 @@ Feature: Register islemleri
     And Email'in "emailUser" oldugunu dogrula
 
 
-  Scenario: Delete Metin Erdem
+  Scenario: Delete User
     Given Kullanici medunna anasayfasina gider
     Then Sag ustteki user ikonuna tikla
     And Sign in butonuna tikla
