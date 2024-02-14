@@ -23,7 +23,7 @@ Feature: Us08
     And Passwort Ebene bestätigt, dass es sich um die erste Ebene handelt.
     And Geben Sie Ihr acht-stelliges Passwort, bestehend aus Großbuchstabe und Zahlen, in das Feld Neues Passwort ein.
     And Passwort Ebene bestätigt, dass es sich um die zweite Ebene handelt.
-@a
+
   Scenario: TC04
     Given Geben Sie im Feld Neues Passwort Ihr acht-stelliges Passwort ein, das nur aus Kleinbuchstabe besteht.
     And Passwort Ebene bestätigt, dass es sich um die erste Ebene handelt.
