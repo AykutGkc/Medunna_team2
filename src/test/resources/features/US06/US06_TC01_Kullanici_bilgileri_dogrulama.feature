@@ -54,8 +54,8 @@ Feature: Register islemleri
     Given Kullanici medunna anasayfasina gider
     And Sag ustteki user ikonuna tikla
     And Sign in butonuna tikla
-    And User hesabina ait username "user2username" gir
-    And User hesabina ait password "user2password" gir
+    And User hesabina ait username "userNameUser" gir
+    And User hesabina ait password "firstPasswordUser" gir
     And Sign in (Submit) butonuna tikla
     And Settings butonuna tikla
     And Firstname kutusuna yeni bir veri gir
@@ -66,8 +66,8 @@ Feature: Register islemleri
     And Sign out'a tikla
     And Sag ustteki user ikonuna tikla
     And Sign in butonuna tikla
-    And User hesabina ait username "user2username" gir
-    And User hesabina ait password "user2password" gir
+    And User hesabina ait username "userNameUser" gir
+    And User hesabina ait password "firstPasswordUser" gir
     And Sign in (Submit) butonuna tikla
     And Settings butonuna tikla
     And First Name degerinin güncellendigini dogrula

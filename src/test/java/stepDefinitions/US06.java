@@ -45,6 +45,7 @@ public class US06 {
     @Then("Sag ustteki user ikonuna tikla")
     public void sagUsttekiUserIkonunaTikla() {
         ReusableMethods.bekle(1);
+        ReusableMethods.scroll(homePage.userIcon);
         ReusableMethods.click(homePage.userIcon);
 
     }

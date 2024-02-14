@@ -119,7 +119,7 @@ public class HomePage {
 
 
     // Yusuf 121-170
-    @FindBy(css = "[data-icon='user']")
+    @FindBy(css = "[data-icon='user'][class$='14 ']")
     public WebElement userIcon;
     @FindBy(xpath = "//*[.='Register']")
     public WebElement register;
