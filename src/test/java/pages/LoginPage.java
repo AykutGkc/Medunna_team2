@@ -68,12 +68,12 @@ public class LoginPage {
 
 
 
+    // 71-120 gokhan
+    @FindBy (css = "#account-menu > div > a:nth-child(2) > span")
+    public WebElement registerButton;
 
-
-
-
-
-
+    @FindBy(css = "#ssn")
+    public  WebElement registerSsn;
 
 
 
