@@ -68,9 +68,7 @@ public class PatientAppoiment {
 
 
 
-
-
- // 71-120 Gökhan
+    // 71-120 Gökhan
     @FindBy(css = "#fromDate")
     public WebElement from;
 
@@ -83,20 +81,20 @@ public class PatientAppoiment {
     @FindBy (xpath = "//*[@id='app-view-container']/div/div/div/div/div/table/thead")
     public WebElement terminTable;
 
+    @FindBy (xpath = "//*[@id='app-view-container']/div/div/div/div/div/table/tbody/tr/td[7]/div")
+    public WebElement viewResults;
 
+    @FindBy (css = "#app-view-container > div > div > div > div > div > table > tbody > tr > td.text-right > div > a > span")
+    public WebElement showTest;
 
+    @FindBy (css = "#app-view-container > div > div")
+    public WebElement testTable;
 
+    @FindBy (xpath = "//*[@id='app-view-container']/div/div/div/div/div/table/tbody/tr/td[8]/div/a[2]/span")
+    public WebElement showInvoice;
 
-
-
-
-
-
-
-
-
-
-
+    @FindBy (css = "#app-view-container > div > div > div > div > table")
+    public WebElement invoice;
 
 
 

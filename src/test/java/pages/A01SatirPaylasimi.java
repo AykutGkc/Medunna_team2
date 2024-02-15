@@ -11,7 +11,7 @@ public class A01SatirPaylasimi {
     //Alı İ.        --->   271-320
     //Sefa T        --->   321-370
     //Esra C.       --->   371-421
-    //Fethullah K.  --->   422-472
+    //Fethullah K.  --->   422-472git merge
     //Omer Faruk C. --->  473-522
 
 

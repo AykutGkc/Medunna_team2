@@ -113,7 +113,20 @@ public class Physician {
   @FindBy(xpath = "//*[@*='Toastify__toast-body']")
   public WebElement fehler;
 
+  @FindBy(xpath = "//*[@id='app-view-container']/div/div/div/div/div[1]/div/table/tbody/tr[20]/td[2]")
+  public WebElement doktorSil;
 
+  @FindBy(xpath = "//*[@id='app-view-container']/div/div/div/div/div[1]/div/table/tbody/tr[20]/td[18]/div/a[3]")
+  public WebElement sil;
+
+  @FindBy(xpath = "//*[@id='app-view-container']/div/div/div/div/div[2]/div[2]/div/nav/ul/li[5]/a")
+  public WebElement sayfa3;
+
+  @FindBy(css = "#jhi-confirm-delete-physician")
+  public WebElement delete;
+
+  @FindBy(xpath = "//*[@id='root']/div/div/div[1]/div/div/div[1]")
+  public WebElement deleteAlert;
 
 
 

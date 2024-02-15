@@ -168,8 +168,19 @@ public class HomePage {
 
 
 
+//Aykut 171-220
 
+    @FindBy(xpath ="//*[@id='password']" )
+    public WebElement passwordinSignIn;
 
+    @FindBy(xpath ="(//*[text()='Sign in'])[3]" )
+    public WebElement signInInSignIn;
+
+    @FindBy(xpath ="//*[@id='firstName']" )
+    public WebElement firstNameInMakeAAppointment;
+
+    @FindBy(xpath ="//*[text()='Send an Appointment Request']" )
+    public WebElement sendAnAppointmentRequest;
 
 
 

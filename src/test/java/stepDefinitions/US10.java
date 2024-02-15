@@ -18,11 +18,14 @@ public class US10 {
     MyPages myPages= new MyPages();
     PatientAppoiment patientAppoiment=new PatientAppoiment();
 
+
     @Given("Der Benutzer geht zur Webseite")
+
     public void derBenutzerGehtZurWebseite() {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
-
     }
+
+
 
     @Then("Klicken Sie auf das Benutzersymbol oben rechts")
     public void klickenSieAufDasBenutzersymbolObenRechts() {
