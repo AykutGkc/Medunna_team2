@@ -102,4 +102,21 @@ public class US18 {
     public void dieBestatigungDassDieRegistrierungsnachrichtNichtEmpfangenWerdenKonnte() {
         Assert.assertTrue(physician.fehler.isDisplayed());
     }
+
+    @Given("Geben Sie die Nummer des Arztes {string} ein, den Sie löschen möchten.")
+    public void gebenSieDieNummerDesArztesEinDenSieLöschenMöchten(String arg0) {
+        //
+        ReusableMethods.scrollEnd();
+        ReusableMethods.bekle(2);
+        ReusableMethods.clickElementByJS(physician.sayfa3);
+        //if(driver.getPageSource().contains("arg0"))
+        if (physician.doktorSil.isDisplayed()) {
+            ReusableMethods.scrollEnd();
+            ReusableMethods.bekle(2);
+            physician.sil.click();
+            ReusableMethods.bekle(1);
+            physician.delete.click();
+
+        }else System.out.println("bulunamadi");
+    }
 }
