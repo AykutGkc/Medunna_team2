@@ -19,7 +19,7 @@ public class US08 {
     AccountRegisterPage account=new AccountRegisterPage();
     Faker faker=new Faker();
     String password;
-  
+
 
     @And("Meldet sich mit Ihrem registrierten Namen und Passwort auf der Website an.")
     public void meldetSichMitIhremRegistriertenNamenUndPasswortAufDerWebsiteAn() {
@@ -86,14 +86,14 @@ public class US08 {
 
     @Given("Geben Sie im Feld Neues Passwort Ihr acht-stelliges Passwort ein, das nur aus Zahlen besteht.")
     public void gebenSieImFeldNeuesPasswortIhrStelligesPasswortEinDasNurAusZahlenBesteht() {
-      int number=faker.number().numberBetween(10000000,99999999);
+        int number=faker.number().numberBetween(10000000,99999999);
         String password = String.valueOf(number);
-      account.newPassword.sendKeys(password);
+        account.newPassword.sendKeys(password);
     }
 
     @And("Passwort Ebene bestätigt, dass es sich um die erste Ebene handelt.")
     public void passwortEbeneBestätigtDassEsSichUmDieErsteEbeneHandelt() {
-      Assert.assertTrue(account.firstLevelPassword.isDisplayed());
+        Assert.assertTrue(account.firstLevelPassword.isDisplayed());
     }
 
     @And("Geben Sie Ihr acht-stelliges Passwort, bestehend aus Kleinbuchstaben und Zahlen, in das Feld Neues Passwort ein.")
@@ -113,10 +113,10 @@ public class US08 {
 
     @And("Geben Sie Ihr acht-stelliges Passwort, bestehend aus Großbuchstabe und Zahlen, in das Feld Neues Passwort ein.")
     public void gebenSieIhrAchtStelligesPasswortBestehendAusGroßbuchstabeUndZahlenInDasFeldNeuesPasswortEin() {
-   String password=faker.number().numberBetween(10000000,99999999)+"A";
-   ReusableMethods.cleanByJs(account.newPassword);
-   ReusableMethods.bekle(1);
-   account.newPassword.sendKeys(password);
+        String password=faker.number().numberBetween(10000000,99999999)+"A";
+        ReusableMethods.cleanByJs(account.newPassword);
+        ReusableMethods.bekle(1);
+        account.newPassword.sendKeys(password);
     }
 
     @Given("Geben Sie im Feld Neues Passwort Ihr acht-stelliges Passwort ein, das nur aus Kleinbuchstabe besteht.")
