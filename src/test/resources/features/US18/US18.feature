@@ -33,5 +33,5 @@ Feature:Als Administrator; Anlegen / Aktualisieren / Anzeigen und Löschen neuer
       | chris      | Gross     | 15.02.1998 | 4462002009 |
 
   Scenario: TC04 Als Administrator löcht ein Pyhsician
-    Given Klicken Sie auf die Schaltflache Delete eines beliebigen Arztes in der Arzteliste
+    Given Geben Sie die Nummer des Arztes "333-66-2563" ein, den Sie löschen möchten.
     Then Bestatigen Sie, dass die Loschung stattgefunden hat.
