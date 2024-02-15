@@ -19,7 +19,7 @@ public class US08 {
     AccountRegisterPage account=new AccountRegisterPage();
     Faker faker=new Faker();
     String password;
-
+  
 
     @And("Meldet sich mit Ihrem registrierten Namen und Passwort auf der Website an.")
     public void meldetSichMitIhremRegistriertenNamenUndPasswortAufDerWebsiteAn() {
