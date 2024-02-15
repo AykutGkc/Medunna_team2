@@ -19,13 +19,7 @@ public class US08 {
     AccountRegisterPage account=new AccountRegisterPage();
     Faker faker=new Faker();
     String password;
-   /* @Given("Der Benutzer geht zur Webseite")
-    public void derBenutzerGehtZurWebseite() {
-        Driver.getDriver().get("https://www.medunna.com/");
-        ReusableMethods.bekle(1);
-    }
-
-    */
+  
 
     @And("Meldet sich mit Ihrem registrierten Namen und Passwort auf der Website an.")
     public void meldetSichMitIhremRegistriertenNamenUndPasswortAufDerWebsiteAn() {
