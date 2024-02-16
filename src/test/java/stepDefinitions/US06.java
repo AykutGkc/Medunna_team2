@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -275,5 +276,32 @@ ReusableMethods.clickElementByJS(accountPage.accountSettings);
     @And("Gecerli Username {string} gir")
     public void gecerliUsernameGir(String userNameUser) {
         accountPage.registerUserName.sendKeys(ConfigReader.getProperty(userNameUser));
+        ReusableMethods.bekle(1);
+
+    }
+
+
+
+    @And("Room save butonuna tikla")
+    public void roomSaveButonunaTikla() {
+        adminPage.roomSaveButton.click();
+        ReusableMethods.bekle(1);
+
+    }
+
+    @And("Room create islemini dogrula")
+    public void roomCreateIsleminiDogrula() {
+        Assert.assertTrue(adminPage.roomCreatedAlert.isDisplayed());
+        ReusableMethods.bekle(1);
+
+    }
+
+    @And("Rooms listesindeki son sayfaya tikla")
+    public void roomsListesindekiSonSayfayaTikla() {
+        ReusableMethods.scroll(adminPage.roomListLastPage);
+        ReusableMethods.bekle(1);
+        adminPage.roomListLastPage.click();
+        ReusableMethods.bekle(1);
+
     }
 }
