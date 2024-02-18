@@ -183,6 +183,28 @@ public class HomePage {
     public WebElement sendAnAppointmentRequest;
 
 
+    @FindBy(xpath ="//*[text()='Appointment registration saved!']")
+    public WebElement grünesKontrollBoxAppointmentRegistrationSaved;
+
+    @FindBy(xpath = "//*[text()='Administration']")
+    public WebElement administrationButtonInHomePage;
+
+    @FindBy(xpath = "//*[text()='User management']")
+    public WebElement userManagementButtonInHomePage;
+
+    @FindBy(xpath = "(//*[@class='btn btn-primary btn-sm'])[2]")
+    public WebElement editButtonInUserManagemenent2Reihe;
+
+    @FindBy(xpath = "//*[@class='svg-inline--fa fa-flag fa-w-16 fa-fw ']")
+    public WebElement countryButton;
+    @FindBy(xpath = "//*[text()='State/City']")
+    public WebElement stateCityButton;
+
+
+
+
+
+
 
 
 
