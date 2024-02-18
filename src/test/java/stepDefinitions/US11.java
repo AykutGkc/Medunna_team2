@@ -75,9 +75,9 @@ public class US11 {
         appointmentUpdatePages.saveButtonInAppointmentUpdate.click();
     }
 
-    @And("Es erscheint ein grünes Kontrollkästchen")
-    public void esErscheintEinGrünesKontrollkästchen() {
-    appointmentUpdatePages.grünesKontrollBox.isDisplayed();
+    @And("Es erscheint ein grünes Kontrollkästchen TheAppointmentIsupdatedWithIdentifier")
+    public void esErscheintEinGrünesKontrollkästchenTheAppointmentIsupdatedWithIdentifier() {
+    appointmentUpdatePages.grünesKontrollBoxTheAppointmentIsupdatedWithIdentifier90694.isDisplayed();
 
     }
 
@@ -92,5 +92,21 @@ public class US11 {
     @Then("Klicken Sie auf die Schaltflache Send an Appointment Request")
     public void klickenSieAufDieSchaltflacheSendAnAppointmentRequest() {
         homePage.sendAnAppointmentRequest.click();
+    }
+
+    @And("Es erscheint ein grünes Kontrollkästchen Appointment registration saved!")
+    public void esErscheintEinGrünesKontrollkästchenAppointmentRegistrationSaved() {
+        ReusableMethods.waitFor(2);
+        homePage.grünesKontrollBoxAppointmentRegistrationSaved.isDisplayed();
+    }
+
+    @When("Klicken Sie auf die Schaltflache Status")
+    public void klickenSieAufDieSchaltflacheStatus() {
+        appointmentUpdatePages.statusInEditAppointment.click();
+    }
+
+    @Then("Wählen Sie Pending im Status")
+    public void wählenSiePendingImStatus() {
+        appointmentUpdatePages.pendingInStatus.click();
     }
 }

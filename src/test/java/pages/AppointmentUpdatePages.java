@@ -168,7 +168,6 @@ public class AppointmentUpdatePages {
 
 
 
-
     //Aykut 171-220
     @FindBy(xpath ="//*[@id='appointment-anamnesis']" )
     public WebElement anammesisBox;
@@ -183,7 +182,15 @@ public class AppointmentUpdatePages {
     public WebElement saveButtonInAppointmentUpdate;
 
     @FindBy( xpath="//*[text()='The Appointment is updated with identifier 90694']")
-    public WebElement grünesKontrollBox;
+    public WebElement grünesKontrollBoxTheAppointmentIsupdatedWithIdentifier90694;
+
+    @FindBy(xpath = "//*[@id='appointment-status']")
+    public WebElement statusInEditAppointment;
+
+    @FindBy(xpath = "//*[text()='PENDING']")
+    public WebElement pendingInStatus;
+
+
 
 
 
