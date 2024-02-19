@@ -17,13 +17,13 @@ public class LoginPage {
 
 
 
-
-
-
-
-
-
-
+// Ilyas
+    // css = "#react-select-3-input")
+    // xpath = "//*[@class=' css-19bb58m']
+    @FindBy(xpath = "//*[@class='form-check form-check-inline']")
+    public WebElement rememberMeButton;
+    @FindBy(xpath =" //*[@type='submit']")
+    public WebElement SignIn;
 
 
 

@@ -17,9 +17,9 @@ public class AdminPage {
 
 
 
-
-
-
+// Ilyas
+    @FindBy(css = "#account-menu")
+    public WebElement adminMenu;
 
 
 
